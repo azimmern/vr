@@ -17,6 +17,15 @@ body {
     z-index: 99;
 }
 
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 .carousel {
     margin-bottom: 4rem;
 }

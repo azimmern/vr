@@ -54,6 +54,10 @@ body {
     margin-left: .75rem;
 }
 
+/* a .navbar-brand:hover {
+    color: white;
+} */
+
 .featurette-divider {
     margin: 5rem 0;
 }

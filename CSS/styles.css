@@ -4,6 +4,19 @@ body {
     color: #5a5a5a;
 }
 
+/* This styles the aside container */
+#aside {
+    height: 600px;
+    width: 600px;
+}
+
+/* This styles the 3D object inserted in the aside container */
+#aside model-viewer {
+    height: 600px;
+    width: 600px;
+    z-index: 99;
+}
+
 .carousel {
     margin-bottom: 4rem;
 }

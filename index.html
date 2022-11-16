@@ -13,17 +13,15 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark"><a class="navbar-brand" href="#">arnaud
-                zimmern, PhD <br>xr portfolio</a><button class="navbar-toggler" type="button" data-toggle="collapse"
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark"><a class="navbar-brand" href="#">XR Collective @ ND<br>portfolio</a><button class="navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active"><a class="nav-link" href="#">blog<span
+                    <li class="nav-item active"><a class="nav-link" href="#">initiatives<span
                                 class="sr-only">(current)</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">xr ethics</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://azimmern.github.io/academicCV">academic
-                            cv</a></li>
+                    <li class="nav-item"><a class="nav-link" href="PAGES/xr_ethics_page">xr ethics</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">people</a></li>
                 </ul>
                 <form class="form-inline mt-2 mt-md-0"><input class="form-control mr-sm-2" type="text"
                         placeholder="Search" aria-label="Search"><button class="btn btn-outline-success my-2 my-sm-0"
@@ -32,6 +30,8 @@
         </nav>
     </header>
     <main role="main">
+
+
 
         <!-- CAROUSEL -->
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -47,53 +47,53 @@
 
                 <div class="carousel-item active">
                     <img src="IMAGES/Kroc Institute_banner.png"
-                        alt="photos of students of the Notre Dame Kroc Institute for International Peace Studies working with VR equipment"
+                        alt="photos of students of Notre Dame's Kroc Institute for International Peace Studies working with VR tools"
                         height="100%" width="auto"" focusable=" false">
                     </img>
                     <div class="container">
                         <div class="carousel-caption text-left">
-                            <h1>360 PeaceTech</h1>
+                            <h1>360 Video 4 PeaceTech</h1>
                             <p>Helping students of the Kroc Institute for International Peace Studies tell
-                                immersive stories in artful, respectful
+                                immersive stories in respectful, artful
                                 ways.</p>
                             <p><a class="btn btn-lg btn-primary" href="#" role="button">See what they're up to</a></p>
                         </div>
                     </div>
                 </div>
 
-                <!-- CAROUSEL2: Killing Romeo -->
+                <!-- CAROUSEL2: GAME JAM -->
 
 
                 <div class="carousel-item">
-                    <img src="IMAGES/killingromeo_banner.png"
-                        alt="photos of students of the Notre Dame Kroc Institute for International Peace Studies working with VR equipment"
-                        height="100%" width="auto"" focusable=" false">
-                    </img>
+                        <!-- This is for holding the 3D object model viewer-->
+                        <div id="aside">
+                            <!-- This inserts the 3D object inside the aside container -->
+                            <!-- For more on model viewer, see https://modelviewer.dev/editor/ -->
+                            <model-viewer src="THREED/admin_bldg_scene.gltf" alt="ND Golden Dome admin building model" auto-rotate camera-controls ar
+                                ios-src="THREED/admin_bldg_scene.gltf"></model-viewer>
+                        </div>
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>Killing Romeo</h1>
-                            <p>It's Shakespeare's tragedy in VR. <br /> You're the apothecary & Romeo wants to buy your
-                                poison.<br /> What do you do?</p>
+                            <h1>Tackling Unity:</h1>
+                            <p>We're hosting the Inaugural Fighting Irish Game Jam in April 2023. Stay tuned for details!</p>
                             <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
                         </div>
                     </div>
                 </div>
 
-                <!-- CAROUSEL3: Anatomical Theater -->
+                <!-- CAROUSEL3: WORKSHOPS -->
 
 
                 <div class="carousel-item">
-
-                        <video width="auto%" height="100%" autoplay muted>
-                            <source src="VIDEOS/com.DefaultCompany.TestingFigures-20221111-170522.mp4" type="video/mp4">
-                        </video>
+                    <img src="https://picsum.photos/1200/400"
+                        alt="Banner announcing Notre Dame Game Jam"
+                        height="100%" width="auto"" focusable=" false">
+                    </img>
 
                     <div class="container">
                         <div class="carousel-caption text-right">
-                            <h1>Teatro Anatomico di Padova</h1>
-                            <p>In 1595, a radical architectural innovation funnelled medical students' attention
-                                downward onto exposed human cadavers. It changed medical history. But how well could
-                                they really see?</p>
+                            <h1>Want to learn VR or AR? Try some of our workshops!</h1>
+                            <p></p>
                             <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
                         </div>
                     </div>
@@ -106,12 +106,27 @@
 
 
         </div><!-- Marketing messaging and featurettes ================================================== -->
+
+    
+
+        <!-- <model-viewer src="THREED/admin_bldg_scene.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="0.48" exposure="0.62" environment-image="legacy" skybox-image="legacy" shadow-softness="1">
+            <div class="progress-bar hide" slot="progress-bar">
+                <div class="update-bar"></div>
+            </div>
+            <button slot="ar-button" id="ar-button">
+                View in your space
+            </button>
+            <div id="ar-prompt">
+                <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+            </div>
+        </model-viewer> -->
+
         <!-- Wrap the rest of the page in another container to center all the content. -->
         <div class="container marketing">
             <!-- Three columns of text below the carousel -->
             <div class="row">
 
-                <!-- XR COLLECTIVE @ ND -->
+                <!-- XR for Scholars -->
                 <div class="col-lg-4"><svg class="bd-placeholder-img rounded-circle" width="140" height="140"
                         xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
                         role="img" aria-label="Placeholder: 140x140">
@@ -127,7 +142,7 @@
                     <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
                 </div><!-- /.col-lg-4 -->
 
-                <!-- GAMEJAM -->
+                <!-- XR FOR GOOD -->
                 <div class="col-lg-4"><svg class="bd-placeholder-img rounded-circle" width="140" height="140"
                         xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
                         role="img" aria-label="Placeholder: 140x140">
@@ -143,7 +158,7 @@
                             &raquo;</a></p>
                 </div><!-- /.col-lg-4 -->
 
-                <!-- DATABASES in UNITY -->
+                <!-- XR @ ND -->
                 <div class="col-lg-4"><svg class="bd-placeholder-img rounded-circle" width="140" height="140"
                         xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
                         role="img" aria-label="Placeholder: 140x140">
@@ -152,9 +167,8 @@
                             dy=".3em">140x140</text>
                     </svg>
                     <h2>XR for Notre Dame</h2>
-                    <p>It's all about the students, staff, and faculty of the University of Notre Dame. I'm honored to
-                        be their first point of reference to learn about immersive technologies and think/create
-                        critically and responsibly.</p>
+                    <p>It's all about the students, staff, and faculty of Notre Dame. To learn about immersive technologies but also to think
+                        critically and create responsibly.</p>
                     <p><a class="btn btn-secondary" href="#" role="button">The XR Collective @ ND &raquo;</a></p>
                 </div><!-- /.col-lg-4 -->
             </div><!-- /.row -->
@@ -167,9 +181,7 @@
                 <div class="col-md-7">
                     <h2 class="featurette-heading">Creativity in Horizon Workrooms. <span class="text-muted">Better than
                             Zoom?</span></h2>
-                    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis
-                        euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus,
-                        tellus ac cursus commodo.</p>
+                    <p class="lead">With Prof. Diego Gomez-Zara and his students, Notre Dame is studying the benefits of virtual reality for workplace creativity and ideation.</p>
                 </div>
                 <div class="col-md-5"><svg
                         class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
@@ -182,14 +194,12 @@
             </div>
             <hr class="featurette-divider">
 
-            <!-- FEATURETTE 2: A Game Jam for the Fighting Irish -->
+            <!-- FEATURETTE 2: Killing Romeo -->
             <div class="row featurette">
                 <div class="col-md-7 order-md-2">
-                    <h2 class="featurette-heading">Tackling Unity. <span class="text-muted">The Fighting Irish
-                            GameJam.</span></h2>
-                    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis
-                        euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus,
-                        tellus ac cursus commodo.</p>
+                    <h2 class="featurette-heading">Killing Romeo. <span class="text-muted">Shakespeare + Medical Ethics.</span></h2>
+                    <p class="lead">It's Shakespeare's tragedy, Act 5 Scene 11. You are the poor apothecary of Mantua. An unknown teenager knocks at your door, wanting to buy 
+                        poison at a high cost. What do you do? This serious game brings modern problems of poverty and drug trading into historical relief - try it with students or theater friends, get ready to dive deep.</p>
                 </div>
                 <div class="col-md-5 order-md-1"><svg
                         class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
@@ -203,27 +213,22 @@
             <hr class="featurette-divider">
             <div class="row featurette">
                 <div class="col-md-7">
-                    <h2 class="featurette-heading">Want to learn more about VR? <span class="text-muted">Check out some
-                            workshops.</span></h2>
-                    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis
-                        euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus,
-                        tellus ac cursus commodo.</p>
+                    <h2 class="featurette-heading">Il Teatro Anatomico di Padova <span class="text-muted"> The Anatomical Theater of Padua</span></h2>
+                    <p class="lead">In 1595, an architectural innovation funnelled medical students' attention
+                        downward onto exposed human cadaver and changed medical history. But how well could
+                        students really see and how well did they really learn?</p>
                 </div>
-                <div class="col-md-5"><svg
-                        class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-                        height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
-                        focusable="false" role="img" aria-label="Placeholder: 500x500">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa"
-                            dy=".3em">500x500</text>
-                    </svg></div>
+                <div class="col-md-5">
+                    <video width="100%" height="100%" autoplay muted>
+                        <source src="VIDEOS/com.DefaultCompany.TestingFigures-20221111-170522.mp4" type="video/mp4">
+                    </video></div>
             </div>
             <hr class="featurette-divider"><!-- /END THE FEATURETTES -->
         </div><!-- /.container -->
         <!-- FOOTER -->
         <footer class="container">
             <p class="float-right"><a href="#">Back to top</a></p>
-            <p>Arnaud Zimmern | University of Notre Dame</p>
+            <p>Design by Arnaud Zimmern, PhD | University of Notre Dame</p>
         </footer>
     </main>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -235,6 +240,8 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
     <script src="JS/main.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </body>
 
 </html>

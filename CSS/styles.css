@@ -6,15 +6,18 @@ body {
 
 /* This styles the aside container */
 #aside {
-    height: 600px;
-    width: 600px;
+    height:400px;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 /* This styles the 3D object inserted in the aside container */
 #aside model-viewer {
     height: 100%;
     width: 100%;
-    z-index: 99;
+    z-index: 1;
 }
 
 .bd-placeholder-img {
@@ -67,8 +70,13 @@ body {
     color: white;
 } */
 
+.featurette {
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+}
+
 .featurette-divider {
-    margin: 5rem 0;
+    margin: 5rem 0rem;
 }
 
 .featurette-heading {

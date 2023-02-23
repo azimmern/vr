@@ -1,1 +1,1 @@
-alert("This website is a demo.")
+alert("This website is in construction.")

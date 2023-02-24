@@ -146,7 +146,8 @@ body {
   background-color: #888888;
   font-size: x-small;
   position:absolute;
-  transform: translate(10px, 10px);
+  transform: translate(10px, -30px);
+  width:fit-content;
   border-radius: 5px;
   padding: 1px;
 }

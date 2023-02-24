@@ -4,22 +4,6 @@ body {
     color: #5a5a5a;
 }
 
-/* This styles the aside container */
-#aside {
-    height:400px;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-/* This styles the 3D object inserted in the aside container */
-#aside model-viewer {
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-}
-
 .bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;
@@ -116,4 +100,57 @@ body {
     .bd-placeholder-img-lg {
         font-size: 3.5rem;
     }
+}
+
+/* Model Viewer*/
+/* This styles the aside container */
+#aside {
+    height:400px;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* This styles the 3D object inserted in the aside container */
+#aside model-viewer {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Model Viewer Hotspots*/
+
+.hotspot{
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: blue;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.hotspot[slot="hotspot-hand"]{
+  --min-hotspot-opacity: 0;
+  background-color: red;
+}
+
+.hotspot[slot="hotspot-foot"]:not([data-visible]) {
+  background-color: transparent;
+  border: 3px solid blue;
+}
+
+.annotation{
+  background-color: #888888;
+  font-size: x-small;
+  position:absolute;
+  transform: translate(10px, 10px);
+  border-radius: 5px;
+  padding: 1px;
+}
+/* This keeps child nodes hidden while the element loads */
+:not(:defined) > * {
+  display: none;
 }

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/styles.css">
-    <title>Arnaud Zimmern XR Portfolio</title>
+    <title>Arnaud Zimmern VR Portfolio</title>
 </head>
 
 <body>
@@ -32,15 +32,78 @@
 
 <!-- MODEL VIEWER -->
     <main role="main">
-        <div id="container">
-            <div id="aside" >
-                <!-- This inserts the 3D object inside the aside container -->
-                <!-- For more on model viewer, see https://modelviewer.dev/editor/ -->
-                <model-viewer class="img-fluid" height="device-height" width="device-width" src="THREED/ADMIN_BLDG/admin_bldg_scene.gltf" alt="Notre Dame Golden Dome Admin Building model - designed by Adam Heet"
-                    auto-rotate camera-controls ar ios-src="THREED/ADMIN_BLDG/admin_bldg_scene.gltf"></model-viewer>
+
+        <div id="container" style="display: block;">
+            <hr/>
             
-            <h1 justify-content="center"> XR FOR HIGHER ED</h1>
+            <div id="aside" >
+                 <!-- This inserts the 3D object inside the aside container 
+                 For more on model viewer, see https://modelviewer.dev/editor/ -->
+                <model-viewer id="goldendome" loading="eager" shadow-intensity="1" height="device-height" width="device-width" src="THREED/ADMIN_BLDG/admin_bldg_scene.gltf" alt="Notre Dame Golden Dome Admin Building model - designed by Adam Heet"
+                    auto-rotate camera-controls ar ios-src="THREED/ADMIN_BLDG/admin_bldg_scene.gltf">
+                
+                    <!-- HOTSPOT -->
+                    <button class="hotspot" slot="hotspot-hand" data-position="-0.54 0.93 0.1" data-normal="-0.73 0.05 0.69">
+                        <div class="annotation">The Golden Dome - model by Adam Heet</div>
+                      </button>
+
+                      <!-- METALLNESS CONTROLS -->
+
+                      <div class="controls">
+                        <div>
+                          <p>Metalness: <span id="metalness-value"></span></p>
+                          <input id="metalness" type="range" min="0" max="1" step="0.01" value="0">
+                        </div>
+                        <div>
+                          <p>Roughness: <span id="roughness-value"></span></p>
+                          <input id="roughness" type="range" min="0" max="1" step="0.01" value="1">
+                        </div>
+                      </div>
+                    </model-viewer>
+                    <script>
+                    const modelViewerParameters = document.querySelector("model-viewer#goldendome");
+                    
+                    modelViewerParameters.addEventListener("load", (ev) => {
+                    
+                      let material = modelViewerParameters.model.materials[0];
+                    
+                      let metalnessDisplay = document.querySelector("#metalness-value");
+                      let roughnessDisplay = document.querySelector("#roughness-value");
+                    
+                      metalnessDisplay.textContent = material.pbrMetallicRoughness.metallicFactor;
+                      roughnessDisplay.textContent = material.pbrMetallicRoughness.roughnessFactor;
+                    
+                      // Defaults to gold
+                      material.pbrMetallicRoughness.setBaseColorFactor([0.7294, 0.5333, 0.0392]);
+                    
+                      document.querySelector('#metalness').addEventListener('input', (event) => {
+                        material.pbrMetallicRoughness.setMetallicFactor(event.target.value);
+                        metalnessDisplay.textContent = event.target.value;
+                      });
+                    
+                      document.querySelector('#roughness').addEventListener('input', (event) => {
+                        material.pbrMetallicRoughness.setRoughnessFactor(event.target.value);
+                        roughnessDisplay.textContent = event.target.value;
+                      });
+                    });
+                    </script>
             </div>
+
+
+        </div>
+
+        <div>
+            <h2 class="featurette-heading" style="padding: .15%;"><a href="PAGES/anatomical_theater.html" style="text-decoration: none;">Reconstructing il Teatro Anatomico di Padova <span class="text-muted" style="font-size: small;"> Unity, Oculus Quest, Adobe Mixamo</span></h3></a></h2>
+           
+            <h2 class="featurette-heading" style="padding: .15%;"><a href="PAGES/killing_romeo.html" style="text-decoration: none;">Killing Romeo <span class="text-muted" style="font-size: small;"> Unity, Oculus Quest 2</span></a></h2>
+            
+            <h2 class="featurette-heading" style="padding: .15%;"><a href="PAGES/aframe_page.html" style="text-decoration: none;">ND Shakespeare: Immersive First Folio<span class="text-muted" style="font-size: small;"">WebVR, Handtracking</span></a></h2>
+            
+            <h2 class="featurette-heading" style="padding: .15%;"><a href="PAGES/xr_iTREDS.html" style="text-decoration: none;">iTREDS: Collaboration and Social Ethics in the Metaverse <span class="text-muted" style="font-size: small;">Ethnographic and User-Testing Research</span></a></h2>
+
+            <h2 class="featurette-heading" style="padding: .15%;"><a href="PAGES/xr_iTREDS.html" style="text-decoration: none;">Grab a Book by its Cover<span class="text-muted" style="font-size: small;">Oculus Integration Package, Handtracking, SQLite</span></a></h2>
+            
+            
         </div>
 
         <!-- <div class="container marketing">
@@ -123,21 +186,7 @@
             <hr class="featurette-divider">
 
             <!-- FEATURETTE 3: ANATOMICAL THEATER-->
-            <div class="row featurette">
-                <a href="/PAGES/anatomical_theater.html">
-                    <div class="col-md-7">
-                    <h2 class="featurette-heading">Il Teatro Anatomico di Padova <span class="text-muted"> Reanimating Anatomies</span></h2>
-                    <p class="lead">In 1595, an architectural innovation changed medical history. But how well could
-                        students really see, hear, and learn? The
-                        Anatomical Theater of Padua VR app brings to life the social dynamics and acoustics of a space that will never again be used to study the human body</p>
-                </div>
-                <div class="col-md-5">
-                    <video width="100%" height="100%" autoplay muted loop>
-                        <source src="VIDEOS/com.DefaultCompany.TestingFigures-20221111-170522.mp4" type="video/mp4">
-                    </video>
-                </div>
-                </a>
-            </div>
+            
             <hr class="featurette-divider">
             
 
@@ -149,7 +198,7 @@
         <footer class="container">
             <p class="float-right"><a href="#">Back to top</a></p>
             <p>Design by Arnaud Zimmern, PhD | University of Notre Dame</p>
-            <p>Made with Bootstrapr.io | hosted on GitHub Pages</p>
+            <p>Made with Bootstrapr.io and A-Frame | hosted on GitHub Pages</p>
         </footer>
     </main>
 
